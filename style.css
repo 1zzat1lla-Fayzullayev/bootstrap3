@@ -256,7 +256,6 @@ body {
 /* Footer */
 
 footer {
-  padding: 0 8px 0 8px;
   margin-top: 200px;
 }
 
@@ -273,6 +272,9 @@ footer {
   display: none;
 }
 @media (max-width: 992px) {
+  footer {
+    padding: 0 8px 0 8px;
+  }
   .bottom-contact-bar {
     display: block;
     position: fixed;
