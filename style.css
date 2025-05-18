@@ -21,7 +21,7 @@ body {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.233);
   background-color: white;
 }
-.custom-container-fluid {
+.custom-justify_div {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
@@ -47,15 +47,6 @@ body {
     max-width: 1320px !important;
   }
 }
-
-.container {
-  /* max-width: 1140px !important; */
-  max-width: 1320px !important;
-  /* margin-left: 0 !important; */
-  /* margin-right: 0 !important; */
-}
-/* @media (min-width: 1200px) {
-} */
 
 .navbar {
   margin-bottom: 0 !important;
@@ -94,6 +85,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 4.8px !important;
+  height: 35px;
   cursor: pointer;
   font-size: 16px;
   border-radius: 0.5rem;
@@ -106,7 +98,7 @@ body {
     padding-right: 0 !important;
     max-width: 960px;
   }
-  .container-fluid {
+  .justify_div {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -139,7 +131,7 @@ body {
     font-size: 16px;
     color: #212529 !important;
   }
-  .navbar-header {
+  .navbar-headerr {
     display: flex;
     align-items: center;
   }
@@ -162,17 +154,17 @@ body {
     padding-left: 12px !important;
     padding-right: 12px !important;
   }
-  .container-fluid .nav_right_desktop {
+  .justify_div .nav_right_desktop {
     display: none !important;
   }
-  .container-fluid > .navbar-collapse,
-  .container-fluid > .navbar-header,
+  .justify_div > .navbar-collapse,
+  .justify_div > .navbar-headerr,
   .container > .navbar-collapse,
-  .container > .navbar-header {
+  .container > .navbar-headerr {
     margin-left: auto;
     margin-right: auto;
   }
-  .navbar-header {
+  .navbar-headerr {
     float: none;
     display: flex;
     justify-content: space-between;
@@ -245,11 +237,17 @@ body {
   }
 }
 
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 768px) {
   .navbar-collapse.collapse.in {
     text-align: center;
     border-top: 1px solid #6c757d !important;
     margin-top: 1rem !important;
+  }
+  .navbar-default {
+    padding: 0 12px 0 12px;
+  }
+  .navbar-brand {
+    padding: 0;
   }
 }
 
@@ -272,9 +270,6 @@ footer {
   display: none;
 }
 @media (max-width: 992px) {
-  footer {
-    padding: 0 8px 0 8px;
-  }
   .bottom-contact-bar {
     display: block;
     position: fixed;
@@ -339,4 +334,10 @@ footer {
 .list-unstyled li {
   padding-top: 10px;
   font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 0 8px 0 8px;
+  }
 }
