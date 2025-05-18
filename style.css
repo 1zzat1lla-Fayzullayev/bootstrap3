@@ -28,6 +28,7 @@ body {
 
 .wrapper {
   margin: 0 auto;
+  padding: 0 12px 0 12px;
 }
 
 @media (min-width: 768px) {
@@ -39,6 +40,12 @@ body {
 @media (min-width: 992px) {
   .wrapper {
     max-width: 960px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    max-width: 1140px !important;
   }
 }
 
@@ -80,18 +87,13 @@ body {
   background: #fff;
 }
 
-.lang-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4.8px !important;
-  height: 35px;
-  cursor: pointer;
-  font-size: 16px;
+.lang-bg {
+  color: #6c757d !important;
+  border: 1px solid #6c757d !important;
+  padding: 7px !important;
   border-radius: 0.5rem;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
 }
-
 @media (min-width: 992px) {
   .container {
     padding-left: 0 !important;
