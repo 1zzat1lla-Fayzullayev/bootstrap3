@@ -96,10 +96,11 @@ body {
 .lang-bg {
   color: #6c757d !important;
   border: 1px solid #6c757d !important;
-  padding: 5px !important;  
+  padding: 5px !important;
   border-radius: 0.6rem;
   font-weight: 700 !important;
   font-size: 16px;
+  line-height: 23.5px;
 }
 @media (min-width: 992px) {
   .container {
@@ -118,6 +119,8 @@ body {
     float: none;
     justify-content: center;
     align-items: center;
+    padding-right: 6px;
+    padding-top: 2px;
   }
   .navbar-nav-center > li {
     display: inline-block;
@@ -130,7 +133,6 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding-left: 15px;
     text-decoration: none;
     font-weight: 700 !important;
   }
@@ -139,6 +141,7 @@ body {
     font-weight: 700 !important;
     font-size: 16px;
     color: #212529 !important;
+    padding-top: 1px;
   }
   .navbar-headerr {
     display: flex;
@@ -150,8 +153,8 @@ body {
     align-items: center;
   }
   .navbar-brand {
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
+    padding-top: 7px !important;
+    padding-bottom: 6px !important;
     padding-left: 0;
     padding-right: 0;
     margin-right: 16px;
@@ -298,6 +301,8 @@ footer {
 }
 .color-bfbfbf {
   color: #bfbfbf;
+  font-size: 16px;
+  font-weight: 400 !important;
 }
 .other_color {
   color: white !important;
@@ -320,6 +325,8 @@ footer {
 
 .border-top {
   border-top: 1px solid #dee2e6 !important;
+  padding: 8px 0 5.5rem 0 !important;
+  margin-top: 4px;
 }
 
 .list-unstyled li {
@@ -327,7 +334,7 @@ footer {
   font-size: 16px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .footer-bg .row > div {
     margin-bottom: 20px;
   }
@@ -343,7 +350,7 @@ footer {
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .footer-bg .row > div {
     margin-bottom: 30px;
   }
