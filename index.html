@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <link
-      href="https://analytics.seo.computer/theme/default/css/bootstrap.min.css"
+      href="https://seo-analyzer.seo.computer/theme/default/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
     <!-- <link rel="stylesheet" href="/style.css" /> -->
     <link
-      href="https://analytics.seo.computer/theme/default/css/custom.css"
+      href="https://seo-analyzer.seo.computer/theme/default/css/custom.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -74,11 +74,52 @@
       margin-right: 0;
     }
     .fot_div {
-      margin-top: 27px;
+      margin-top: 23px;
       padding: 0;
     }
     .list-unstyled {
       margin-bottom: 8px !important;
+    }
+
+@media screen and (max-width:1400px) {
+  .footer-bg{
+    min-height: 464px;
+  }
+}
+
+    @media screen and (min-width:1100px) {
+        .fw-500.fs-20.mb-10 {
+          padding-top: 1px;
+        margin-bottom: 8px !important;
+          
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      .row.ss {
+        display: flex !important;
+        flex-wrap: wrap !important;
+      }
+
+      .centre {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .fot_div {
+        margin-top: 18px;
+      }
+      .col-xs-12.col-sm-6.col-md-3 {
+        width: 50%;
+      }
+      
+      .list-unstyled {
+        margin-bottom: 0 !important;
+      }
+
+       .fw-500.fs-20.mb-10 {
+        margin-bottom: 8px !important;
+      }
     }
     @media (max-width: 992px) {
       .navbar-collapse {
@@ -112,9 +153,49 @@
       .footer-bg .row > div {
         margin-bottom: 0px;
       }
-      .footer-bg .fs-20 {
+
+      .footer-bg {
+        padding-bottom: 16px;
+      }
+      .navbar-inverse .navbar-text {
+        padding: 1px 0;
+        font-size: 16px;
+        color: white;
+      }
+    }
+
+     @media screen and (min-width: 679px){
+  .footer-bg .fs-20 {
+        margin-top: 0 !important;
+        font-size: 20px !important;
+      }
+        .fw-500.fs-20.mb-10 {
+        line-height: 30px;
+        font-weight: 500;
+      }
+     }
+
+    @media screen and (min-width: 679px) and (max-width:1099px) {
+    
+      .fw-500.fs-20.mb-10 {
+        margin-bottom: 9px !important;
+   
+      }
+    }
+
+
+    @media screen and (max-width: 768px) {
+      .col-xs-12.col-sm-6.col-md-3 {
+        width: 100%;
+      }
+       .footer-bg .fs-20 {
         margin-top: 0 !important;
         font-size: 16px !important;
+      }
+    }
+    @media screen and (min-width: 576px) {
+      .wrapper {
+        max-width: 540px;
       }
     }
   </style>
@@ -373,7 +454,7 @@
         <div class="row pt-30 ss">
           <div
             class="col-xs-12 col-sm-6 col-md-3"
-            style="padding: 0; margin-top: 22px"
+            style="padding: 0; margin-top: 24px"
           >
             <a href="https://seo.computer/ru/moscow">
               <img
@@ -382,12 +463,14 @@
                 height="40"
                 alt="SEO Computer"
                 class="img-responsive"
-                style="border-radius: 2rem; object-fit: contain"
+                style="border-radius: 2rem; object-fit: contain; height: 40px; width: 200px"
               />
             </a>
             <ul class="list-unstyled">
               <li style="margin-bottom: 0">SEO COMPUTER</li>
-              <li style="margin-bottom: 0; line-height:23px;">Интернет-маркетинг</li>
+              <li style="margin-bottom: 0; line-height: 23px">
+                Интернет-маркетинг
+              </li>
               <li style="margin-bottom: 0">Часы работы: круглосуточно</li>
               <li class="norender" style="margin-bottom: 0">
                 <span class="pricerange">от 18282 RUB</span>
@@ -404,6 +487,7 @@
                 <a
                   href="tel:+78001019224"
                   class="color-bfbfbf nav-link link-dark p-xl-0 p-lg-0 ps-0"
+                  style="padding-right: 10px"
                   >Рабочий телефон: 8 (800) 101-92-24</a
                 >
               </li>
@@ -415,7 +499,7 @@
             </ul>
           </div>
 
-          <div class="fot_div col-xs-12 col-sm-6 col-md-3">
+          <div class="fot_div col-xs-12 col-sm-6 col-md-3 centre">
             <div class="fw-500 fs-20 mb-10" style="margin-bottom: 10px">
               Меню
             </div>
@@ -561,5 +645,8 @@
       src="https://analytics.seo.computer/theme/default/js/bootstrap.min.js"
       type="text/javascript"
     ></script>
+    <script>
+      console.log(window.innerWidth)
+    </script>
   </body>
 </html>
