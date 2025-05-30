@@ -15,8 +15,6 @@
       rel="stylesheet"
       type="text/css"
     />
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   </head>
 
   <style>
@@ -54,9 +52,8 @@
       box-shadow: 4px 0px 10px 2px rgb(0 0 0 / 20%);
     }
     .lang-bg {
-     
-     color: #6c757d !important;
-     border: 1px solid #6c757d !important;
+      color: #6c757d !important;
+      border: 1px solid #6c757d !important;
       border-radius: 8px !important;
       font-weight: 600 !important;
       padding-top: 4.8px !important;
@@ -67,18 +64,17 @@
       height: 36px !important;
       display: flex;
       align-items: center;
-      
     }
-    .navbar-default .navbar-brand{
+    .navbar-default .navbar-brand {
       margin-right: 16px;
     }
     .list-unstyled li {
       padding-top: 0;
-      
+
       line-height: 24px;
     }
     .fot_div .list-unstyled li {
-margin-bottom: 8px !important;
+      margin-bottom: 8px !important;
     }
     .text-light .ss {
       padding-top: 40px;
@@ -93,30 +89,37 @@ margin-bottom: 8px !important;
       margin-bottom: 8px !important;
     }
 
-    .navbar-default .navbar-toggle{
+    .navbar-default .navbar-toggle {
       height: 40px;
       width: 56px;
       border: 1px solid #6c757d !important;
       padding: 0.45rem 0.75rem !important;
       font-size: 0.375rem;
       border-radius: 0.6rem;
-      color: rgba(0,0,0,.55);
+      color: rgba(0, 0, 0, 0.55);
       margin: 5px 0;
     }
 
-    @media screen and (width:430px) {
-      .lang-bg{
-        height: 35.60px !important;
+    .navbar-default .navbar-toggle:focus {
+      text-decoration: none;
+      outline: 0;
+      box-shadow: 0 0 0 4px;
+      background-color: transparent !important;
+    }
+
+    @media screen and (width: 430px) {
+      .lang-bg {
+        height: 35.6px !important;
       }
     }
 
-    @media screen and (max-width:1000px) {
-      .navbar-brand{
+    @media screen and (max-width: 1000px) {
+      .navbar-brand {
         padding-top: 2px !important;
       }
     }
 
-    .navbar-default .navbar-toggle .icon-bar{
+    .navbar-default .navbar-toggle .icon-bar {
       background-image: url(https://seo.computer/assets/images/main-menu.svg) !important;
       width: 30px;
       height: 30px;
@@ -125,19 +128,18 @@ margin-bottom: 8px !important;
       background-color: transparent !important;
       background-repeat: no-repeat;
       background-position: center;
-    } 
+    }
 
-@media screen and (max-width:1400px) {
-  .footer-bg{
-    min-height: 464px;
-  }
-}
+    @media screen and (max-width: 1400px) {
+      .footer-bg {
+        min-height: 464px;
+      }
+    }
 
-    @media screen and (min-width:1100px) {
-        .fw-500.fs-20.mb-10 {
-          padding-top: 1px;
+    @media screen and (min-width: 1100px) {
+      .fw-500.fs-20.mb-10 {
+        padding-top: 1px;
         margin-bottom: 8px !important;
-          
       }
     }
 
@@ -158,12 +160,12 @@ margin-bottom: 8px !important;
       .col-xs-12.col-sm-6.col-md-3 {
         width: 50%;
       }
-      
+
       .list-unstyled {
         margin-bottom: 0 !important;
       }
 
-       .fw-500.fs-20.mb-10 {
+      .fw-500.fs-20.mb-10 {
         margin-bottom: 8px !important;
       }
     }
@@ -210,39 +212,223 @@ margin-bottom: 8px !important;
       }
     }
 
-     @media screen and (min-width: 679px){
-  .footer-bg .fs-20 {
+    @media screen and (min-width: 679px) {
+      .footer-bg .fs-20 {
         margin-top: 0 !important;
         font-size: 20px !important;
       }
-        .fw-500.fs-20.mb-10 {
+      .fw-500.fs-20.mb-10 {
         line-height: 30px;
         font-weight: 500;
       }
-     }
-
-    @media screen and (min-width: 679px) and (max-width:1099px) {
-    
-      .fw-500.fs-20.mb-10 {
-        margin-bottom: 8px !important;;;;
-   
-      }
     }
 
+    @media screen and (min-width: 679px) and (max-width: 1099px) {
+      .fw-500.fs-20.mb-10 {
+        margin-bottom: 8px !important;
+      }
+    }
 
     @media screen and (max-width: 768px) {
       .col-xs-12.col-sm-6.col-md-3 {
         width: 100%;
       }
-       .footer-bg .fs-20 {
+      .footer-bg .fs-20 {
         margin-top: 0 !important;
         font-size: 16px !important;
       }
     }
+
+    @media screen and (max-width: 678px) {
+      .navbar-collapse.collapse.in {
+        text-align: center;
+        border-top: 1px solid #6c757d !important;
+        margin-top: 16px !important;
+        padding-top: 16px !important;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .nav.navbar-nav {
+        margin: 0;
+      }
+
+      .navbar-nav > li > a {
+        line-height: 21px !important;
+      }
+
+      .nav.navbar-nav.navbar-right a {
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+        padding-right: 8px;
+        font-size: 16px;
+      }
+      .navbar-collapse .navbar-right {
+        padding-left: 0px !important;
+        margin-top: 8px;
+      }
+    }
+
     @media screen and (min-width: 576px) {
       .wrapper {
         max-width: 540px;
       }
+    }
+  </style>
+
+  <style>
+    /* Custom CSS for the language modal */
+    .language-modal .modal-dialog {
+      max-width: 300px;
+      height: 89vh;
+      display: flex;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 768px) {
+      .language-modal .modal-dialog {
+        max-width: 100%;
+        justify-content: center;
+        height: 100vh;
+      margin: 0 8px;
+
+      }
+    }
+
+    @media screen and (max-width:576px) {
+      .language-modal .modal-content{
+        width: 100%;
+      }
+      .language-modal .modal-header{
+        height: 57px;
+      }
+      .language-modal .close-icon{
+        padding-right: 0 !important;
+      }
+    }
+
+    .language-modal .w-100 {
+      width: 100%;
+    }
+
+    .modal-content {
+      border-radius: 8px !important;
+    }
+
+    .language-modal .close {
+      opacity: 1;
+      font-size: 16px;
+      margin-top: 0;
+    }
+
+    .language-modal .close-icon {
+      box-sizing: content-box;
+      width: 16px;
+      height: 16px;
+      color: #000;
+      border: 0;
+      border-radius: 6px;
+      opacity: 0.5;
+      background: transparent
+        url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
+        center/1em auto no-repeat;
+
+      padding: calc(16px * 0.5) calc(16px * 0.5);
+    }
+
+    .language-modal .modal-header {
+      padding: 16px;
+      border-bottom: 1px solid #dee2e6;
+
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .language-modal .modal-header::before,
+    .language-modal .modal-header::after {
+      display: none;
+    }
+
+    .fs-22 {
+      font-size: 16px;
+    }
+
+    @media screen and (min-width: 679px) {
+      .fs-22 {
+        font-size: 22px !important;
+      }
+    }
+
+    .language-modal .modal-body {
+      padding: 16px;
+      padding-bottom: 0;
+    }
+    .language-modal .modal-footer {
+      padding: 16px;
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .language-select-wrapper {
+      position: relative;
+    }
+
+    .form-select {
+      display: block;
+      width: 100%;
+      padding: 6px 36px 6px 12px;
+      height: 38px;
+      -moz-padding-start: calc(12px - 3px);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      background-color: #fff;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 16px 12px;
+      border: 1px solid #ced4da;
+      border-radius: 6px;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    .form-select:focus {
+      border-color: #86b7fe;
+      outline: 0;
+      box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.25);
+    }
+
+    .modal-footer .btn-lang {
+      font-size: 16px;
+      padding: 6px 12px;
+      font-weight: 400;
+      line-height: 1.5;
+      border: 1px solid #0d6efd;
+      border-radius: 6px;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    .modal-footer .btn-lang:hover {
+      color: #fff;
+      background-color: #0b5ed7;
+      border-color: #0a58ca;
+    }
+
+    .modal-footer .btn-lang.active {
+      color: #fff;
+      background-color: #0a58ca;
+      border-color: #0a53be;
     }
   </style>
   <body>
@@ -282,13 +468,15 @@ margin-bottom: 8px !important;
                 <img
                   src="https://seo.computer/assets/svg/seo_logo.svg"
                   alt="SEO COMPUTER в Москве"
-                  style="width: 185px;"
+                  style="width: 185px"
                 />
               </a>
               <span
-                class="lang-bg rounded-3 cr-pon text-uppercase"
+                class="lang-bg rounded-3 btn-language-selector cr-pon text-uppercase"
                 data-bs-toggle="modal"
                 data-bs-target="#ModalLanguage"
+                data-toggle="modal"
+                data-target="#languageModal"
                 title="ru"
                 >ru</span
               >
@@ -509,7 +697,12 @@ margin-bottom: 8px !important;
                 height="40"
                 alt="SEO Computer"
                 class="img-responsive"
-                style="border-radius: 2rem; object-fit: contain; height: 40px; width: 200px"
+                style="
+                  border-radius: 2rem;
+                  object-fit: contain;
+                  height: 40px;
+                  width: 200px;
+                "
               />
             </a>
             <ul class="list-unstyled">
@@ -517,7 +710,9 @@ margin-bottom: 8px !important;
               <li style="margin-bottom: 0; line-height: 23px">
                 Интернет-маркетинг
               </li>
-              <li style="margin-bottom: 0; line-height:25px;">Часы работы: круглосуточно</li>
+              <li style="margin-bottom: 0; line-height: 25px">
+                Часы работы: круглосуточно
+              </li>
               <li class="norender" style="margin-bottom: 0">
                 <span class="pricerange">от 18282 RUB</span>
                 <img
@@ -691,10 +886,217 @@ margin-bottom: 8px !important;
         </div>
       </div>
     </footer>
+
+    <!-- Modal Language -->
+    <div
+      class="modal fade language-modal"
+      id="languageModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="languageModalLabel"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title fs-22 fw-500" id="languageModalLabel">
+              Выберите язык
+            </h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <div class="close-icon"></div>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="language-select-wrapper">
+              <select
+                class="form-select mb-2"
+                aria-label="Выберите язык"
+                name="language"
+                id="language"
+              >
+                <option value="">Выберите язык</option>
+                <option value="az">азербайджанский (az)</option>
+                <option value="bo">аймара (bo)</option>
+                <option value="al">албанский (al)</option>
+                <option value="et">амхарский (et)</option>
+                <option value="en">английский (en)</option>
+                <option value="eg">арабский (eg)</option>
+                <option value="am">армянский (am)</option>
+                <option value="in-as">ассамский (in-as)</option>
+                <option value="za">африкаанс (za)</option>
+                <option value="bf">бамбара (bf)</option>
+                <option value="es-pv">баскский (es-pv)</option>
+                <option value="by">белорусский (by)</option>
+                <option value="bd">бенгальский (bd)</option>
+                <option value="mm">бирманский (mm)</option>
+                <option value="bg">болгарский (bg)</option>
+                <option value="ba">боснийский (ba)</option>
+                <option value="gy">бходжпури (gy)</option>
+                <option value="gb-wls">валлийский (gb-wls)</option>
+                <option value="hu">венгерский (hu)</option>
+                <option value="vn">вьетнамский (vn)</option>
+                <option value="us-haw">гавайский (us-haw)</option>
+                <option value="gal">галисийский (gal)</option>
+                <option value="gr">греческий (gr)</option>
+                <option value="ge">грузинский (ge)</option>
+                <option value="py">гуарани (py)</option>
+                <option value="gj">гуджарати (gj)</option>
+                <option value="dk">датский (dk)</option>
+                <option value="in-doi">догри (in-doi)</option>
+                <option value="za-nl">зулу (za-nl)</option>
+                <option value="il">иврит (il)</option>
+                <option value="ng-ig">игбо (ng-ig)</option>
+                <option value="de-yi">идиш (de-yi)</option>
+                <option value="ph-ilo">илоканский (ph-ilo)</option>
+                <option value="id">индонезийский (id)</option>
+                <option value="ie">ирландский (ie)</option>
+                <option value="is">исландский (is)</option>
+                <option value="es">испанский (es)</option>
+                <option value="it">итальянский (it)</option>
+                <option value="ng">йоруба (ng)</option>
+                <option value="kz">казахский (kz)</option>
+                <option value="in-ka">каннада (in-ka)</option>
+                <option value="es-ct">каталанский (es-ct)</option>
+                <option value="pe">кечуа (pe)</option>
+                <option value="kg">киргизский (kg)</option>
+                <option value="tw">китайский (традиционный) (tw)</option>
+                <option value="cn">китайский (упрощенный) (cn)</option>
+                <option value="in-ga">конкани (in-ga)</option>
+                <option value="kr">корейский (kr)</option>
+                <option value="fr-h">корсиканский (fr-h)</option>
+                <option value="za-wc">коса (za-wc)</option>
+                <option value="ht">креольский (гаити) (ht)</option>
+                <option value="sl">крио (sl)</option>
+                <option value="sy">курдский (курманджи) (sy)</option>
+                <option value="iq">курдский (сорани) (iq)</option>
+                <option value="kh">кхмерский (kh)</option>
+                <option value="lao">лаосский (lao)</option>
+                <option value="va">латинский (va)</option>
+                <option value="lv">латышский (lv)</option>
+                <option value="cg">лингала (cg)</option>
+                <option value="lt">литовский (lt)</option>
+                <option value="ug">луганда (ug)</option>
+                <option value="lu">люксембургский (lu)</option>
+                <option value="in-br">майтхили (in-br)</option>
+                <option value="mk">македонский (mk)</option>
+                <option value="mg">малагасийский (mg)</option>
+                <option value="my">малайский (my)</option>
+                <option value="in-kl">малаялам (in-kl)</option>
+                <option value="mv">мальдивский (mv)</option>
+                <option value="mt">мальтийский (mt)</option>
+                <option value="nz">маори (nz)</option>
+                <option value="mu">маратхи (mu)</option>
+                <option value="in-mn">мейтейлон (манипури) (in-mn)</option>
+                <option value="in-mz">мизо (in-mz)</option>
+                <option value="mn">монгольский (mn)</option>
+                <option value="de">немецкий (de)</option>
+                <option value="np">непальский (np)</option>
+                <option value="nl">нидерландский (nl)</option>
+                <option value="no">норвежский (no)</option>
+                <option value="in-or">ория (in-or)</option>
+                <option value="et-or">оромо (et-or)</option>
+                <option value="pk">панджаби (pk)</option>
+                <option value="ir">персидский (ir)</option>
+                <option value="pl">польский (pl)</option>
+                <option value="pt">португальский (pt)</option>
+                <option value="af">пушту (af)</option>
+                <option value="rw">руанда (rw)</option>
+                <option value="ro">румынский (ro)</option>
+                <option value="ru" selected>русский (ru)</option>
+                <option value="ws">самоанский (ws)</option>
+                <option value="in-sa">санскрит (in-sa)</option>
+                <option value="ph-ceb">себуанский (ph-ceb)</option>
+                <option value="nso">сепеди (nso)</option>
+                <option value="rs">сербский (rs)</option>
+                <option value="ls">сесото (ls)</option>
+                <option value="lk">сингальский (lk)</option>
+                <option value="pk-sd">синдхи (pk-sd)</option>
+                <option value="sk">словацкий (sk)</option>
+                <option value="si">словенский (si)</option>
+                <option value="so">сомалийский (so)</option>
+                <option value="tz">суахили (tz)</option>
+                <option value="id-su">сунданский (id-su)</option>
+                <option value="tj">таджикский (tj)</option>
+                <option value="th">тайский (th)</option>
+                <option value="sg">тамильский (sg)</option>
+                <option value="tatar">татарский (tatar)</option>
+                <option value="in-ap">телугу (in-ap)</option>
+                <option value="er">тигринья (er)</option>
+                <option value="sz">тсонга (sz)</option>
+                <option value="tr">турецкий (tr)</option>
+                <option value="tm">туркменский (tm)</option>
+                <option value="uz">узбекский (uz)</option>
+                <option value="cn-xj">уйгурский (cn-xj)</option>
+                <option value="ua">украинский (ua)</option>
+                <option value="fj">урду (fj)</option>
+                <option value="ph">филиппинский (ph)</option>
+                <option value="fi">финский (fi)</option>
+                <option value="fr">французский (fr)</option>
+                <option value="fy">фризский (fy)</option>
+                <option value="cm">хауса (cm)</option>
+                <option value="in">хинди (in)</option>
+                <option value="hmn">хмонг (hmn)</option>
+                <option value="hr">хорватский (hr)</option>
+                <option value="gh">чви (gh)</option>
+                <option value="mw">чева (mw)</option>
+                <option value="cz">чешский (cz)</option>
+                <option value="se">шведский (se)</option>
+                <option value="zw">шона (zw)</option>
+                <option value="sco">шотландский (гэльский) (sco)</option>
+                <option value="tg">эве (tg)</option>
+                <option value="eo">эсперанто (eo)</option>
+                <option value="ee">эстонский (ee)</option>
+                <option value="jw">яванский (jw)</option>
+                <option value="jp">японский (jp)</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-lang btn-primary w-100"
+              id="applyLanguage"
+            >
+              Изменить
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
     <script
-      src="https://analytics.seo.computer/theme/default/js/bootstrap.min.js"
+      src="https://seo-analyzer.seo.computer/theme/default/js/bootstrap.min.js"
       type="text/javascript"
     ></script>
- 
+
+    <script>
+      $(document).ready(function () {
+function getCodeFromText(text) {
+                var matches = text.match(/\(([^)]+)\)/);
+                return matches ? matches[1] : text;
+            }
+
+
+        $("#language").change(function () {
+          var selectedText = $(this).find("option:selected").text();
+                var languageCode = getCodeFromText(selectedText);
+          $(".btn-language-selector").html("" + languageCode  + "");
+        });
+
+        // Apply button functionality
+        $("#applyLanguage").click(function () {
+          $("#languageModal").modal("hide");
+
+          var selectedLanguage = $("#language").val();
+          console.log("Selected language code: " + selectedLanguage);
+        });
+      });
+    </script>
   </body>
 </html>
