@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Navbar Clone</title>
+    <style>
+        /* Exact Bootstrap 5.2.3 navbar styles */
+        :root {
+            --bs-blue: #0d6efd;
+            --bs-indigo: #6610f2;
+            --bs-purple: #6f42c1;
+            --bs-pink: #d63384;
+            --bs-red: #dc3545;
+            --bs-orange: #fd7e14;
+            --bs-yellow: #ffc107;
+            --bs-green: #198754;
+            --bs-teal: #20c997;
+            --bs-cyan: #0dcaf0;
+            --bs-white: #fff;
+            --bs-gray: #6c757d;
+            --bs-gray-dark: #343a40;
+            --bs-primary: #0d6efd;
+            --bs-secondary: #6c757d;
+            --bs-success: #198754;
+            --bs-info: #0dcaf0;
+            --bs-warning: #ffc107;
+            --bs-danger: #dc3545;
+            --bs-light: #f8f9fa;
+            --bs-dark: #212529;
+            --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+        }
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        @media (prefers-reduced-motion: no-preference) {
+            :root {
+                scroll-behavior: smooth;
+            }
+        }
+        
+        body {
+            margin: 0;
+            font-family: var(--bs-font-sans-serif);
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #fff;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        
+        .navbar {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .navbar > .container,
+        .navbar > .container-fluid,
+        .navbar > .container-sm,
+        .navbar > .container-md,
+        .navbar > .container-lg,
+        .navbar > .container-xl,
+        .navbar > .container-xxl {
+            display: flex;
+            flex-wrap: inherit;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .navbar-brand {
+            padding-top: 0.3125rem;
+            padding-bottom: 0.3125rem;
+            margin-right: 1rem;
+            font-size: 1.25rem;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        
+        .navbar-nav {
+            display: flex;
+            flex-direction: column;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+        }
+        
+        .navbar-nav .nav-link {
+            padding-right: 0;
+            padding-left: 0;
+        }
+        
+        .navbar-nav .dropdown-menu {
+            position: static;
+        }
+        
+        .navbar-text {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .navbar-collapse {
+            flex-basis: 100%;
+            flex-grow: 1;
+            align-items: center;
+        }
+        
+        .navbar-toggler {
+            padding: 0.25rem 0.75rem;
+            font-size: 1.25rem;
+            line-height: 1;
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
+            transition: box-shadow 0.15s ease-in-out;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .navbar-toggler {
+                transition: none;
+            }
+        }
+        
+        .navbar-toggler:hover {
+            text-decoration: none;
+        }
+        
+        .navbar-toggler:focus {
+            text-decoration: none;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem;
+        }
+        
+        .navbar-toggler-icon {
+            display: inline-block;
+            width: 1.5em;
+            height: 1.5em;
+            vertical-align: middle;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+        }
+        
+        .navbar-nav-scroll {
+            max-height: var(--bs-scroll-height, 75vh);
+            overflow-y: auto;
+        }
+        
+        @media (min-width: 576px) {
+            .navbar-expand-sm {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+            }
+            .navbar-expand-sm .navbar-nav {
+                flex-direction: row;
+            }
+            .navbar-expand-sm .navbar-nav .dropdown-menu {
+                position: absolute;
+            }
+            .navbar-expand-sm .navbar-nav .nav-link {
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+            }
+            .navbar-expand-sm .navbar-nav-scroll {
+                overflow: visible;
+            }
+            .navbar-expand-sm .navbar-collapse {
+                display: flex !important;
+                flex-basis: auto;
+            }
+            .navbar-expand-sm .navbar-toggler {
+                display: none;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .navbar-expand-md {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+            }
+            .navbar-expand-md .navbar-nav {
+                flex-direction: row;
+            }
+            .navbar-expand-md .navbar-nav .dropdown-menu {
+                position: absolute;
+            }
+            .navbar-expand-md .navbar-nav .nav-link {
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+            }
+            .navbar-expand-md .navbar-nav-scroll {
+                overflow: visible;
+            }
+            .navbar-expand-md .navbar-collapse {
+                display: flex !important;
+                flex-basis: auto;
+            }
+            .navbar-expand-md .navbar-toggler {
+                display: none;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .navbar-expand-lg {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+            }
+            .navbar-expand-lg .navbar-nav {
+                flex-direction: row;
+            }
+            .navbar-expand-lg .navbar-nav .dropdown-menu {
+                position: absolute;
+            }
+            .navbar-expand-lg .navbar-nav .nav-link {
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+            }
+            .navbar-expand-lg .navbar-nav-scroll {
+                overflow: visible;
+            }
+            .navbar-expand-lg .navbar-collapse {
+                display: flex !important;
+                flex-basis: auto;
+            }
+            .navbar-expand-lg .navbar-toggler {
+                display: none;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .navbar-expand-xl {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+            }
+            .navbar-expand-xl .navbar-nav {
+                flex-direction: row;
+            }
+            .navbar-expand-xl .navbar-nav .dropdown-menu {
+                position: absolute;
+            }
+            .navbar-expand-xl .navbar-nav .nav-link {
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+            }
+            .navbar-expand-xl .navbar-nav-scroll {
+                overflow: visible;
+            }
+            .navbar-expand-xl .navbar-collapse {
+                display: flex !important;
+                flex-basis: auto;
+            }
+            .navbar-expand-xl .navbar-toggler {
+                display: none;
+            }
+        }
+        
+        @media (min-width: 1400px) {
+            .navbar-expand-xxl {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+            }
+            .navbar-expand-xxl .navbar-nav {
+                flex-direction: row;
+            }
+            .navbar-expand-xxl .navbar-nav .dropdown-menu {
+                position: absolute;
+            }
+            .navbar-expand-xxl .navbar-nav .nav-link {
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+            }
+            .navbar-expand-xxl .navbar-nav-scroll {
+                overflow: visible;
+            }
+            .navbar-expand-xxl .navbar-collapse {
+                display: flex !important;
+                flex-basis: auto;
+            }
+            .navbar-expand-xxl .navbar-toggler {
+                display: none;
+            }
+        }
+        
+        .navbar-expand {
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+        }
+        
+        .navbar-expand .navbar-nav {
+            flex-direction: row;
+        }
+        
+        .navbar-expand .navbar-nav .dropdown-menu {
+            position: absolute;
+        }
+        
+        .navbar-expand .navbar-nav .nav-link {
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+        }
+        
+        .navbar-expand .navbar-nav-scroll {
+            overflow: visible;
+        }
+        
+        .navbar-expand .navbar-collapse {
+            display: flex !important;
+            flex-basis: auto;
+        }
+        
+        .navbar-expand .navbar-toggler {
+            display: none;
+        }
+        
+        .navbar-light .navbar-brand {
+            color: rgba(0, 0, 0, 0.9);
+        }
+        
+        .navbar-light .navbar-brand:hover,
+        .navbar-light .navbar-brand:focus {
+            color: rgba(0, 0, 0, 0.9);
+        }
+        
+        .navbar-light .navbar-nav .nav-link {
+            color: rgba(0, 0, 0, 0.55);
+        }
+        
+        .navbar-light .navbar-nav .nav-link:hover,
+        .navbar-light .navbar-nav .nav-link:focus {
+            color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .navbar-light .navbar-nav .nav-link.disabled {
+            color: rgba(0, 0, 0, 0.3);
+        }
+        
+        .navbar-light .navbar-nav .show > .nav-link,
+        .navbar-light .navbar-nav .nav-link.active {
+            color: rgba(0, 0, 0, 0.9);
+        }
+        
+        .navbar-light .navbar-toggler {
+            color: rgba(0, 0, 0, 0.55);
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-light .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        
+        .navbar-light .navbar-text {
+            color: rgba(0, 0, 0, 0.55);
+        }
+        
+        .navbar-light .navbar-text a,
+        .navbar-light .navbar-text a:hover,
+        .navbar-light .navbar-text a:focus {
+            color: rgba(0, 0, 0, 0.9);
+        }
+        
+        .container,
+        .container-fluid,
+        .container-sm,
+        .container-md,
+        .container-lg,
+        .container-xl,
+        .container-xxl {
+            width: 100%;
+            padding-right: var(--bs-gutter-x, 0.75rem);
+            padding-left: var(--bs-gutter-x, 0.75rem);
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        @media (min-width: 576px) {
+            .container-sm, .container {
+                max-width: 540px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .container-md, .container-sm, .container {
+                max-width: 720px;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .container-lg, .container-md, .container-sm, .container {
+                max-width: 960px;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .container-xl, .container-lg, .container-md, .container-sm, .container {
+                max-width: 1140px;
+            }
+        }
+        
+        @media (min-width: 1400px) {
+            .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+                max-width: 1320px;
+            }
+        }
+        
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #0d6efd;
+            text-decoration: none;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .nav-link {
+                transition: none;
+            }
+        }
+        
+        .nav-link:hover,
+        .nav-link:focus {
+            color: #0a58ca;
+        }
+        
+        .nav-link.disabled {
+            color: #6c757d;
+            pointer-events: none;
+            cursor: default;
+        }
+        
+        .collapse:not(.show) {
+            display: none;
+        }
+        
+        .collapsing {
+            height: 0;
+            overflow: hidden;
+            transition: height 0.35s ease;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .collapsing {
+                transition: none;
+            }
+        }
+        
+        .collapsing.collapse-horizontal {
+            width: 0;
+            height: auto;
+            transition: width 0.35s ease;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .collapsing.collapse-horizontal {
+                transition: none;
+            }
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            z-index: 1000;
+            display: none;
+            min-width: 10rem;
+            padding: 0.5rem 0;
+            margin: 0;
+            font-size: 1rem;
+            color: #212529;
+            text-align: left;
+            list-style: none;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 0.25rem;
+        }
+        
+        .dropdown-menu[data-bs-popper] {
+            top: 100%;
+            left: 0;
+            margin-top: 0.125rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Exact Bootstrap 5.2.3 collapse functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const SELECTOR_TOGGLE = '[data-bs-toggle="collapse"]';
+            
+            class Collapse {
+                constructor(element, config) {
+                    this._element = element;
+                    this._config = this._getConfig(config);
+                    this._isTransitioning = false;
+                    this._triggerArray = [];
+                    
+                    const toggleList = [].slice.call(document.querySelectorAll(SELECTOR_TOGGLE));
+                    
+                    for (let i = 0, len = toggleList.length; i < len; i++) {
+                        const elem = toggleList[i];
+                        const selector = this._getSelectorFromElement(elem);
+                        const filterElement = [].slice.call(document.querySelectorAll(selector))
+                            .filter(foundElem => foundElem === this._element);
+                        
+                        if (selector !== null && filterElement.length > 0) {
+                            this._triggerArray.push(elem);
+                        }
+                    }
+                    
+                    this._initializeChildren();
+                    
+                    if (!this._config.parent) {
+                        this._addAriaAndCollapsedClass(this._triggerArray, this._element.classList.contains('show'));
+                    }
+                    
+                    if (this._config.toggle) {
+                        this.toggle();
+                    }
+                }
+                
+                // Public methods
+                toggle() {
+                    if (this._element.classList.contains('show')) {
+                        this.hide();
+                    } else {
+                        this.show();
+                    }
+                }
+                
+                show() {
+                    if (this._isTransitioning || this._element.classList.contains('show')) {
+                        return;
+                    }
+                    
+                    let actives = [];
+                    let activesData;
+                    
+                    if (this._config.parent) {
+                        const children = [].slice.call(this._config.parent.querySelectorAll('.collapse.show'));
+                        actives = [].slice.call(children).filter(elem => {
+                            if (typeof this._config.parent === 'string') {
+                                return elem.getAttribute('data-bs-parent') === this._config.parent;
+                            }
+                            return elem.classList.contains('collapse');
+                        });
+                    }
+                    
+                    if (actives.length > 0) {
+                        activesData = actives[0]._isTransitioning ? null : actives[0];
+                        Collapse.hide(activesData);
+                        if (!activesData) return;
+                    }
+                    
+                    const dimension = this._getDimension();
+                    
+                    this._element.classList.remove('collapse');
+                    this._element.classList.add('collapsing');
+                    this._element.style[dimension] = 0;
+                    
+                    this._addAriaAndCollapsedClass(this._triggerArray, true);
+                    this._isTransitioning = true;
+                    
+                    const complete = () => {
+                        this._element.classList.remove('collapsing');
+                        this._element.classList.add('collapse', 'show');
+                        this._element.style[dimension] = '';
+                        this._isTransitioning = false;
+                    };
+                    
+                    const capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
+                    const scrollSize = `scroll${capitalizedDimension}`;
+                    
+                    this._element.style[dimension] = `${this._element[scrollSize]}px`;
+                    
+                    const transitionDuration = this._getTransitionDuration();
+                    
+                    setTimeout(() => {
+                        this._element.style[dimension] = '';
+                        this._element.addEventListener('transitionend', complete, { once: true });
+                    }, transitionDuration);
+                }
+                
+                hide() {
+                    if (this._isTransitioning || !this._element.classList.contains('show')) {
+                        return;
+                    }
+                    
+                    const dimension = this._getDimension();
+                    
+                    this._element.style[dimension] = `${this._element.getBoundingClientRect()[dimension]}px`;
+                    
+                    this._element.classList.add('collapsing');
+                    this._element.classList.remove('collapse', 'show');
+                    
+                    this._addAriaAndCollapsedClass(this._triggerArray, false);
+                    this._isTransitioning = true;
+                    
+                    const complete = () => {
+                        this._isTransitioning = false;
+                        this._element.classList.remove('collapsing');
+                        this._element.classList.add('collapse');
+                    };
+                    
+                    this._element.style[dimension] = '';
+                    
+                    const transitionDuration = this._getTransitionDuration();
+                    
+                    this._element.addEventListener('transitionend', complete, { once: true });
+                }
+                
+                // Private methods
+                _getConfig(config) {
+                    config = {
+                        toggle: true,
+                        parent: null,
+                        ...config
+                    };
+                    return config;
+                }
+                
+                _getDimension() {
+                    return this._element.classList.contains('collapse-horizontal') ? 'width' : 'height';
+                }
+                
+                _getSelectorFromElement(element) {
+                    let selector = element.getAttribute('data-bs-target');
+                    
+                    if (!selector || selector === '#') {
+                        let hrefAttr = element.getAttribute('href');
+                        selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : null;
+                    }
+                    
+                    return selector;
+                }
+                
+                _initializeChildren() {
+                    if (!this._config.parent) {
+                        return;
+                    }
+                    
+                    const children = [].slice.call(this._config.parent.querySelectorAll(SELECTOR_TOGGLE));
+                    
+                    for (let i = 0, len = children.length; i < len; i++) {
+                        const elem = children[i];
+                        const selector = this._getSelectorFromElement(elem);
+                        
+                        if (selector) {
+                            const target = [].slice.call(document.querySelectorAll(selector))
+                                .filter(target => target.classList.contains('collapse'));
+                            
+                            if (target.length > 0) {
+                                this._addAriaAndCollapsedClass([elem], target[0].classList.contains('show'));
+                            }
+                        }
+                    }
+                }
+                
+                _addAriaAndCollapsedClass(triggerArray, isOpen) {
+                    if (!triggerArray.length) {
+                        return;
+                    }
+                    
+                    for (let i = 0, len = triggerArray.length; i < len; i++) {
+                        const elem = triggerArray[i];
+                        
+                        if (isOpen) {
+                            elem.classList.remove('collapsed');
+                            elem.setAttribute('aria-expanded', 'true');
+                        } else {
+                            elem.classList.add('collapsed');
+                            elem.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                }
+                
+                _getTransitionDuration() {
+                    let transitionDuration = window.getComputedStyle(this._element).transitionDuration;
+                    const floatTransitionDuration = parseFloat(transitionDuration);
+                    
+                    if (!transitionDuration || transitionDuration === '0s') {
+                        return 0;
+                    }
+                    
+                    transitionDuration = transitionDuration.split(',')[0];
+                    return parseFloat(transitionDuration) * 1000;
+                }
+                
+                // Static
+                static collapseInterface(element, config) {
+                    let data = new Collapse(element, config);
+                    return data;
+                }
+                
+                static hide(instance) {
+                    if (!instance || !instance._isTransitioning) {
+                        return;
+                    }
+                    
+                    instance.hide();
+                }
+            }
+            
+            // Initialize collapses
+            const collapseElements = [].slice.call(document.querySelectorAll('.collapse'));
+            collapseElements.forEach(element => {
+                const toggleSelector = `[data-bs-toggle="collapse"][data-bs-target="#${element.id}"], [data-bs-toggle="collapse"][href="#${element.id}"]`;
+                const toggleElements = [].slice.call(document.querySelectorAll(toggleSelector));
+                
+                if (toggleElements.length) {
+                    const config = {
+                        toggle: false
+                    };
+                    
+                    const parent = toggleElements[0].getAttribute('data-bs-parent');
+                    if (parent) {
+                        config.parent = parent;
+                    }
+                    
+                    Collapse.collapseInterface(element, config);
+                }
+            });
+            
+            // Handle click events
+            document.addEventListener('click', function(event) {
+                const toggleElement = event.target.closest(SELECTOR_TOGGLE);
+                if (!toggleElement) return;
+                
+                event.preventDefault();
+                
+                const targetSelector = toggleElement.getAttribute('data-bs-target') || toggleElement.getAttribute('href');
+                if (!targetSelector) return;
+                
+                const targetElement = document.querySelector(targetSelector);
+                if (!targetElement) return;
+                
+                const data = new Collapse(targetElement, {
+                    toggle: false
+                });
+                
+                data.toggle();
+            });
+        });
+    </script>
+</body>
+</html>
